@@ -1,8 +1,4 @@
-# Track large media files with LFS
-img/*.mp4 filter=lfs diff=lfs merge=lfs -text
-img/*.jpg filter=lfs diff=lfs merge=lfs -text
-img/*.mp3 filter=lfs diff=lfs merge=lfs -text
-
-# Ensure HTML/CSS are NOT tracked by LFS
-*.html -filter=lfs -diff=lfs -merge=lfs text
-*.css -filter=lfs -diff=lfs -merge=lfs text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
