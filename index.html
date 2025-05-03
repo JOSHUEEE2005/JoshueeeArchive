@@ -76,7 +76,7 @@
                 <div class="row g-4">
                     <div class="col-md-6">
                         <div class="video-wrapper">
-                            <video class="hover-video img-fluid rounded" controls>
+                            <video class="hover-video img-fluid rounded" controls muted>
                                 <source src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/Rizal_small.mp4" type="video/mp4">
                                 <source src="./img/Rizal_small.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
@@ -88,7 +88,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="video-wrapper">
-                            <video class="hover-video img-fluid rounded" controls>
+                            <video class="hover-video img-fluid rounded" controls muted>
                                 <source src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/Commercial.mp4" type="video/mp4">
                                 <source src="./img/Commercial.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
@@ -102,7 +102,7 @@
                 <div class="row g-4 mt-4">
                     <div class="col-md-6">
                         <div class="video-wrapper">
-                            <video class="hover-video img-fluid rounded" controls>
+                            <video class="hover-video img-fluid rounded" controls muted>
                                 <source src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/Compet.mp4" type="video/mp4">
                                 <source src="./img/Compet.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
@@ -114,7 +114,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="video-wrapper">
-                            <video class="hover-video img-fluid rounded" controls>
+                            <video class="hover-video img-fluid rounded" controls muted>
                                 <source src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/BuwanNgWika.mp4" type="video/mp4">
                                 <source src="./img/BuwanNgWika.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
@@ -268,6 +268,7 @@
     </footer>
 
     <script>
+        // Existing audio waveform toggle script
         document.querySelectorAll('.waveform-toggle').forEach(toggle => {
             toggle.addEventListener('change', () => {
                 const audioId = toggle.id.replace('waveform-toggle-', 'audio-feature-');
@@ -278,6 +279,17 @@
                     audio.pause();
                     audio.currentTime = 0;
                 }
+            });
+        });
+
+        // New hover-to-play for featured videos
+        document.querySelectorAll('.hover-video').forEach(video => {
+            video.addEventListener('mouseenter', () => {
+                video.play();
+            });
+            video.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0; // Reset to start
             });
         });
     </script>
