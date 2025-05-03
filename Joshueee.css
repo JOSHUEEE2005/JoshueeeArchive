@@ -1,0 +1,959 @@
+/* Resets default margins and ensures full-width page */
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 80px;
+}
+
+/* Styles background video to cover entire page */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Adds semi-transparent overlay over background video */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(53, 53, 53, 0.795), rgba(31, 30, 30, 0.534));
+    z-index: -1;
+}
+
+/* Styles hero section to show background video */
+#hero {
+    background: transparent;
+    color: white;
+}
+
+/* Aligns hero content with left padding */
+#hero .container {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 15%;
+}
+
+/* Styles hero heading */
+#hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles hero paragraph */
+#hero p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles navbar with black background */
+.navbar.bg-black {
+    background-color: #000;
+    padding: 1.5rem 1rem;
+}
+
+/* Ensures navbar stays above other content */
+.navbar.fixed-top {
+    z-index: 1000;
+}
+
+/* Styles navbar brand logo */
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for navbar brand */
+.navbar-brand:hover {
+    color: #ccc;
+}
+
+/* Styles navbar menu items */
+.navbar-nav {
+    gap: 3rem;
+    margin-left: auto;
+}
+
+/* Styles individual nav links */
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for nav links */
+.navbar-nav .nav-link:hover {
+    color: #ccc;
+}
+
+/* Styles active nav link */
+.navbar-nav .nav-link.active {
+    font-weight: 700;
+}
+
+/* Styles mobile menu toggle button */
+.navbar-toggler {
+    border: 2px solid white;
+    padding: 10px;
+}
+
+/* Customizes toggle button icon */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/* Hover effect for toggle button */
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Wider container for sections */
+.container-wide {
+    width: 100%;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Now Showing Section (#team) */
+#team {
+    padding: 4rem 0;
+}
+
+#team h2 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles team container */
+.team-container {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.fade-img {
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    min-height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Hover effect for image: fade and zoom */
+.fade-img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Featured Videos Section (#videos) */
+#videos {
+    padding: 4rem 0;
+}
+
+#videos h2 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles video container */
+.video-container {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* Styles video wrapper for positioning button */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Styles hover-play videos */
+.hover-video {
+    opacity: 1;
+    width: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-video:hover {
+    border: 2px solid #ff007a;
+    box-shadow: 0 0 10px #ff007a;
+}
+
+/* Styles YouTube button */
+.youtube-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #ff007a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+    text-decoration: none;
+}
+
+.youtube-btn i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.video-wrapper:hover .youtube-btn {
+    opacity: 1;
+}
+
+.youtube-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ff007a;
+}
+
+/* Discover More Section (#reveal) */
+#reveal {
+    background: transparent;
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+#reveal h2 {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+.reveal-box {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 600px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111;
+}
+
+.reveal-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.reveal-box .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.reveal-box:hover .gradient-overlay {
+    opacity: 1.8;
+}
+
+.reveal-box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    line-height: 1.7;
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 0 0 5px #000;
+    color: #fff;
+    max-width: 80%;
+}
+
+.reveal-box:hover p {
+    opacity: 1;
+}
+
+.reveal-box::before {
+    content: 'Hover to Reveal';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2em;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 4;
+    text-shadow: 0 0 5px #000;
+}
+
+.reveal-box:hover::before {
+    opacity: 0;
+}
+
+/* Styles glowing card container */
+.card-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Styles individual glowing card */
+.glow-card {
+    position: relative;
+    width: 300px;
+    padding: 25px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+}
+
+/* Hover effect for glowing card */
+.glow-card:hover {
+    transform: translateY(-10px);
+    border: 2px solid #ff007a;
+    box-shadow: 0 0 20px #ff007a, 0 0 40px #ff007a, 0 0 60px rgba(255, 0, 122, 0.5);
+}
+
+/* Styles heading in glowing card */
+.glow-card h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #ff007a;
+    text-shadow: 0 0 5px #ff007a;
+}
+
+/* Styles paragraph in glowing card */
+.glow-card p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* Adds glowing background effect for hover */
+.glow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff007a;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+/* Shows glowing background on hover */
+.glow-card:hover::before {
+    opacity: 0.1;
+}
+
+/* Styles voice section */
+.gaming {
+    background-color: #000;
+    padding: 4rem 0;
+    position: relative;
+}
+
+/* Separator design before the voice section */
+.gaming:has(.card-container)::before {
+    content: '';
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ff007a, transparent);
+    box-shadow: 0 0 10px #ff007a;
+    margin: 2rem auto;
+    position: relative;
+    top: 0;
+}
+
+/* Styles voice section title */
+.gaming h2 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 600;
+    color: #fae5d3;
+    margin-bottom: 10px;
+}
+
+/* Styles voice section description */
+.gaming p {
+    font-size: 1.5rem;
+    color: #fae5d3;
+    margin-bottom: 10px;
+}
+
+/* Centers title and text in the voice section */
+.gaming:has(.card-container) h2,
+.gaming:has(.card-container) p {
+    text-align: center;
+}
+
+/* Centers voice cards */
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 3rem 0;
+    position: relative;
+}
+
+/* Separator design for contact section */
+.contact-separator {
+    width: 80%;
+    max-width: 800px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ff007a, transparent);
+    box-shadow: 0 0 10px #ff007a;
+    margin: 2rem auto;
+}
+
+/* Styles contact section title */
+.contact-section h2 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #fae5d3;
+    text-shadow: 0 0 5px #ff007a;
+}
+
+/* Styles contact card container */
+.contact-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: #1a1a1a;
+    border-radius: 12px;
+    border: 2px solid #ff007a;
+    box-shadow: 0 0 10px #ff007a;
+    transition: all 0.4s ease;
+}
+
+/* Hover effect for contact card */
+.contact-card:hover {
+    box-shadow: 0 0 20px #ff007a, 0 0 40px rgba(255, 0, 122, 0.5);
+}
+
+/* Styles contact form inputs */
+.contact-input {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect for inputs */
+.contact-input:focus {
+    outline: none;
+    border-color: #ff007a;
+    box-shadow: 0 0 10px #ff007a;
+    background-color: #333;
+}
+
+/* Styles contact form labels */
+.contact-form .form-label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fae5d3;
+}
+
+/* Styles contact form button */
+.contact-btn {
+    background-color: #ff007a;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for button */
+.contact-btn:hover {
+    background-color: #e6006e;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff007a;
+}
+
+/* Ensures contact form fits container */
+.contact-form {
+    max-width: 100%;
+}
+
+/* Styles footer text */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Mobile styles for screens smaller than 768px */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav {
+        gap: 1rem;
+        margin-left: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+
+    #hero .container {
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    #hero .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .container-wide {
+        max-width: 90%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .team-container,
+    .video-container,
+    .reveal-box,
+    .card-container {
+        max-width: 100%;
+    }
+
+    .youtube-btn {
+        width: 32px;
+        height: 32px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .youtube-btn i {
+        font-size: 1rem;
+    }
+
+    .contact-section {
+        padding: 2rem 0;
+    }
+
+    .contact-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-card {
+        max-width: 90%;
+        padding: 2rem;
+    }
+
+    .contact-form .form-label {
+        font-size: 1.1rem;
+    }
+
+    .contact-input,
+    .contact-btn {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    .contact-separator {
+        width: 90%;
+        margin: 1.5rem auto;
+    }
+
+    .d-flex.gap-4 i {
+        font-size: 1.5rem;
+    }
+
+    .team-container .row {
+        margin: 0;
+    }
+
+    .fade-img {
+        max-width: 100%;
+        margin-bottom: 15px;
+        min-height: 500px;
+    }
+
+    .video-container .row {
+        margin: 0;
+    }
+
+    .hover-video {
+        max-width: 100%;
+        margin-bottom: 15px;
+        min-height: 300px;
+    }
+
+    .gaming {
+        padding: 3rem 0;
+    }
+
+    .gaming h2 {
+        font-size: 3rem;
+    }
+
+    .gaming p {
+        font-size: 1.2rem;
+    }
+
+    .card-container {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .glow-card {
+        width: 250px;
+        padding: 20px;
+    }
+
+    .glow-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .glow-card p {
+        font-size: 0.9rem;
+    }
+
+    .gaming:has(.card-container)::before {
+        max-width: 90%;
+        margin: 1.5rem auto;
+    }
+
+    #reveal {
+        padding: 3rem 0;
+    }
+
+    .reveal-box {
+        height: 500px;
+    }
+
+    .reveal-box p {
+        font-size: 1.6rem;
+        max-width: 90%;
+    }
+
+    .reveal-box::before {
+        font-size: 1.6em;
+    }
+}
+
+/* Styles for very small screens (below 576px) */
+@media (max-width: 576px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    .fade-img {
+        margin-bottom: 10px;
+        min-height: 400px;
+    }
+
+    .hover-video {
+        margin-bottom: 10px;
+        min-height: 200px;
+    }
+
+    .youtube-btn {
+        width: 28px;
+        height: 28px;
+        top: 6px;
+        right: 6px;
+    }
+
+    .youtube-btn i {
+        font-size: 0.9rem;
+    }
+
+    .reveal-box {
+        height: 400px;
+    }
+
+    .reveal-box p {
+        font-size: 1.4rem;
+    }
+
+    .reveal-box::before {
+        font-size: 1.4em;
+    }
+
+    .gaming {
+        padding: 2rem 0;
+    }
+
+    .gaming h2 {
+        font-size: 2.5rem;
+    }
+
+    .gaming p {
+        font-size: 1rem;
+    }
+
+    .card-container {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .glow-card {
+        width: 220px;
+        padding: 15px;
+    }
+
+    .glow-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .glow-card p {
+        font-size: 0.8rem;
+    }
+
+    .gaming:has(.card-container)::before {
+        max-width: 95%;
+        margin: 1rem auto;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-card {
+        padding: 1.5rem;
+    }
+
+    .contact-form .form-label {
+        font-size: 1rem;
+    }
+
+    .contact-input,
+    .contact-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .contact-separator {
+        width: 95%;
+        margin: 1rem auto;
+    }
+}
+
+/* Responsive adjustments for Now Showing images */
+@media (max-width: 768px) {
+    .fade-img {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    .fade-img {
+        min-height: 400px;
+    }
+}
+
+/* Responsive adjustments for videos */
+@media (max-width: 768px) {
+    .hover-video {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hover-video {
+        min-height: 200px;
+    }
+}
+
+/* Waveform Animation Styles */
+.waveform-toggle {
+    display: none;
+}
+
+.waveform-label {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(255, 0, 122, 0.2), rgba(255, 77, 148, 0.2));
+    transition: box-shadow 0.3s ease;
+}
+
+.waveform-label:hover {
+    box-shadow: 0 0 15px #ff007a;
+}
+
+.waveform-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 8px;
+}
+
+.wave-bar {
+    width: 8px;
+    height: 25px;
+    background: #ff007a;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #ff007a;
+    transform-origin: bottom;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.wave-bar:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.wave-bar:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.wave-bar:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.wave-bar:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scaleY(0.5);
+        box-shadow: 0 0 5px #ff007a;
+    }
+    50% {
+        transform: scaleY(1.5);
+        box-shadow: 0 0 15px #ff007a;
+    }
+}
+
+.waveform-toggle:checked + .waveform-label .wave-bar {
+    animation: pulse-active 0.8s infinite ease-in-out;
+}
+
+@keyframes pulse-active {
+    0%, 100% {
+        transform: scaleY(0.7);
+        background: #ff4d94;
+        box-shadow: 0 0 20px #ff4d94;
+    }
+    50% {
+        transform: scaleY(2);
+        background: #ff007a;
+        box-shadow: 0 0 30px #ff007a;
+    }
+}
+
+.waveform-audio {
+    display: none;
+}
+
+/* Responsive adjustments for waveform */
+@media (max-width: 768px) {
+    .waveform-label {
+        height: 40px;
+    }
+
+    .wave-bar {
+        width: 6px;
+        height: 20px;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 576px) {
+    .waveform-label {
+        height: 30px;
+    }
+
+    .wave-bar {
+        width: 5px;
+        height: 15px;
+        gap: 5px;
+    }
+}

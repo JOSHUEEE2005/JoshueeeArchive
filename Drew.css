@@ -1,0 +1,676 @@
+/* Base Styles */
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background: #1c2526;
+    color: #ffffff;
+    position: relative;
+    padding-top: 80px;
+}
+
+/* Vignette Overlay */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar.bg-dark {
+    background-color: #000000;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar.fixed-top {
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ffffff;
+}
+
+.navbar-nav {
+    gap: 3rem;
+    margin-left: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.navbar-toggler {
+    border: 2px solid #ffffff;
+    padding: 10px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.navbar-toggler:hover {
+    background-color: #ffffff;
+}
+
+/* Hero Section */
+#hero {
+    background: transparent;
+}
+
+.hero-card {
+    background: #000000;
+    padding: 3rem;
+    border-radius: 15px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 900px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+#hero h1 {
+    font-family: Arial, sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.pulse-button {
+    padding: 1rem 2rem;
+    background: #000000;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.pulse-button:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Container */
+.container-wide {
+    width: 100%;
+    max-width: 1800px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Section Separator */
+.section-separator {
+    width: 80%;
+    max-width: 1000px;
+    height: 2px;
+    background: #ffffff;
+    margin: 2rem auto;
+}
+
+/* About Section */
+#about {
+    background: transparent;
+}
+
+.about-card {
+    background: #000000;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 1800px;
+    width: 99%;
+    min-height: 900px;
+    margin: 0 auto;
+    padding: 10rem;
+}
+
+#about h2 {
+    font-family: Arial, sans-serif;
+    font-size: 6.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#about img {
+    border: 6px solid #ffffff;
+    max-width: 400px;
+}
+
+#about .blockquote p {
+    font-style: italic;
+    font-size: 2rem;
+    color: #ffffff;
+    position: relative;
+    padding: 0 40px;
+}
+
+#about .blockquote p::before,
+#about .blockquote p::after {
+    content: '"';
+    font-size: 2.5rem;
+    color: #ffffff;
+    position: absolute;
+}
+
+#about .blockquote p::before {
+    left: 10px;
+    top: -15px;
+}
+
+#about .blockquote p::after {
+    right: 10px;
+    bottom: -15px;
+}
+
+#about p:not(.blockquote p) {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+#about h5 {
+    font-family: Arial, sans-serif;
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-top: 2rem;
+}
+
+#about ul {
+    margin: 0;
+    padding: 0;
+}
+
+#about ul li {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+#about ul li::before {
+    content: '\2022';
+    color: #ffffff;
+    font-size: 1.8rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.progress-container {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.progress-item {
+    margin-bottom: 1.5rem;
+    padding: 15px;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.progress-label {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background: #000000;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ffffff;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #ffffff;
+    border-radius: 15px;
+    width: 0;
+}
+
+.progress-fill[data-progress="90"] { width: 90%; }
+.progress-fill[data-progress="85"] { width: 85%; }
+.progress-fill[data-progress="80"] { width: 80%; }
+.progress-fill[data-progress="75"] { width: 75%; }
+
+.progress-percentage {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* FAQ Section */
+#faq h2 {
+    font-family: Arial, sans-serif;
+    font-size: 9rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.faq-card {
+    background: #000000;
+    padding: 4rem;
+    border-radius: 15px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.accordion-container {
+    width: 100%;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+}
+
+.accordion-input {
+    display: none;
+}
+
+.accordion-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: #000000;
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.accordion-label:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.accordion-label i {
+    color: #ffffff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.accordion-label:hover i {
+    color: #000000;
+}
+
+.accordion-input:checked + .accordion-label i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background: #000000;
+    padding: 0 2rem;
+    border: 2px solid #ffffff;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.accordion-input:checked ~ .accordion-content {
+    max-height: 400px;
+    padding: 2rem;
+}
+
+.accordion-content p {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+/* Social Links */
+.social-icon i {
+    font-size: 2rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover i {
+    color: #ffffff;
+}
+
+/* Footer */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav {
+        gap: 1rem;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .hero-card {
+        padding: 2rem;
+        max-width: 90%;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .pulse-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    #about {
+        padding: 4rem 0;
+    }
+
+    .about-card {
+        padding: 6rem;
+        max-width: 95%;
+        width: 95%;
+        min-height: 700px;
+    }
+
+    #about h2 {
+        font-size: 4.5rem;
+    }
+
+    #about img {
+        max-width: 250px;
+        margin: 0 auto 2rem;
+    }
+
+    #about .blockquote p {
+        font-size: 1.6rem;
+        padding: 0 20px;
+    }
+
+    #about .blockquote p::before,
+    #about .blockquote p::after {
+        font-size: 2rem;
+        left: 0;
+        right: 0;
+    }
+
+    #about p:not(.blockquote p) {
+        font-size: 0.9rem;
+    }
+
+    #about h5 {
+        font-size: 1.8rem;
+    }
+
+    #about ul li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+
+    #about ul li::before {
+        font-size: 1.5rem;
+    }
+
+    .progress-label {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .progress-bar {
+        height: 25px;
+    }
+
+    .progress-percentage {
+        font-size: 0.8rem;
+    }
+
+    .progress-container {
+        padding: 20px 0;
+    }
+
+    .progress-item {
+        margin-bottom: 1rem;
+        padding: 10px;
+    }
+
+    #faq h2 {
+        font-size: 6rem;
+    }
+
+    .faq-card {
+        padding: 3rem;
+        max-width: 90%;
+    }
+
+    .accordion-label {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+
+    .accordion-content {
+        padding: 0 1.5rem;
+    }
+
+    .accordion-input:checked ~ .accordion-content {
+        padding: 1.5rem;
+    }
+
+    .accordion-content p {
+        font-size: 1.4rem;
+    }
+
+    .section-separator {
+        width: 90%;
+        margin: 1.5rem auto;
+    }
+
+    .social-icon i {
+        font-size: 1.5rem;
+    }
+
+    body::after {
+        background: radial-gradient(circle, transparent 60%, rgba(0, 0, 0, 0.7) 100%);
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-card {
+        padding: 1.5rem;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    .pulse-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    #about {
+        padding: 3rem 0;
+    }
+
+    .about-card {
+        padding: 4rem;
+        max-width: 98%;
+        width: 98%;
+        min-height: 600px;
+    }
+
+    #about h2 {
+        font-size: 3.5rem;
+    }
+
+    #about img {
+        max-width: 200px;
+    }
+
+    #about .blockquote p {
+        font-size: 1.4rem;
+        padding: 0 15px;
+    }
+
+    #about .blockquote p::before,
+    #about .blockquote p::after {
+        font-size: 1.8rem;
+    }
+
+    #about p:not(.blockquote p) {
+        font-size: 0.8rem;
+    }
+
+    #about h5 {
+        font-size: 1.6rem;
+    }
+
+    #about ul li {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+        padding-left: 15px;
+    }
+
+    #about ul li::before {
+        font-size: 1.2rem;
+    }
+
+    .progress-label {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .progress-bar {
+        height: 20px;
+    }
+
+    .progress-percentage {
+        font-size: 0.6rem;
+    }
+
+    .progress-container {
+        padding: 15px 0;
+    }
+
+    .progress-item {
+        margin-bottom: 0.8rem;
+        padding: 8px;
+    }
+
+    #faq h2 {
+        font-size: 5rem;
+    }
+
+    .faq-card {
+        padding: 2.5rem;
+    }
+
+    .accordion-label {
+        font-size: 1.6rem;
+        padding: 1.2rem;
+    }
+
+    .accordion-content {
+        padding: 0 1.2rem;
+    }
+
+    .accordion-input:checked ~ .accordion-content {
+        padding: 1.2rem;
+    }
+
+    .accordion-content p {
+        font-size: 1.2rem;
+    }
+
+    .section-separator {
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+    .social-icon i {
+        font-size: 1.2rem;
+    }
+}
