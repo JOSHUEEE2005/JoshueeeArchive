@@ -208,7 +208,7 @@ body::after {
 }
 
 #about p:not(.blockquote p) {
-    font-size: 1rem;
+    font-size: 2rem;
     color: #ffffff;
 }
 
@@ -235,7 +235,7 @@ body::after {
 #about ul li::before {
     content: '\2022';
     color: #ffffff;
-    font-size: 1.8rem;
+    font-size: 3rem;
     position: absolute;
     left: 0;
     top: 0;
