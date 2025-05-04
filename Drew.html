@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Drew.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-dark text-white fixed-top">
@@ -15,25 +16,25 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse bg-dark justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse bg-dark justify-content-end" id="navbarNav">
                 <ul class="navbar-nav gap-4">
                     <li class="nav-item"><a href="#about" class="nav-link active fs-4 text-white" aria-current="page">About Me</a></li>
-                    <li class="nav-item"><a href="index.html#team" class="nav-link fs-4 text-white">Project</a></li>
-                    <li class="nav-item"><a href="index.html#contact" class="nav-link fs-4 text-white">Contact me</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link fs-4 text-white">Skills</a></li>
+                    <li class="nav-item"><a href="#hobbies" class="nav-link fs-4 text-white">Hobbies</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section id="hero" class="vh-100 d-flex align-items-center justify-content-center text-white">
+    <section id="hero" class="vh-100 d-flex align-items-center justify-content-center text-white" data-aos="fade-up">
         <div class="hero-card">
-            <h1>Know the artist behind the Archive</h1>
+            <h1 class="animate-text">Know the Artist Behind the Archive</h1>
             <p>Josh Andrew E. Cumpas</p>
-            <a href="index.html" class="btn btn-danger btn-lg mt-3">Learn More</a>
+            <a href="index.html" class="btn btn-danger btn-lg mt-3 pulse-button">Learn More</a>
         </div>
     </section>
 
-    <div id="about" class="container-fluid text-white text-center py-6">
+    <div id="about" class="container-fluid text-white text-center py-6" data-aos="fade-up">
         <div class="container-wide p-6">
             <div class="section-separator"></div>
             <div class="about-card rounded p-8">
@@ -44,7 +45,7 @@
                     </div>
                     <div class="col-md-8">
                         <blockquote class="blockquote text-center mb-8">
-                            <p class="my-4">Creatives in the making </p>
+                            <p class="my-4">Creatives in the Making</p>
                         </blockquote>
                         <p class="mb-8">Hello, I’m a 19-year-old who loves being creative. I’m great at voice overs and directing short videos, it’s what I enjoy most. I’m studying Information Technology and excited about blending my creativity with tech skills to create something cool and innovative. Can’t wait to see where this journey leads!</p>
                     </div>
@@ -53,42 +54,39 @@
         </div>
     </div>
 
-    <div id="about" class="container-fluid text-white text-center py-6">
+    <div id="skills" class="container-fluid text-white text-center py-6" data-aos="fade-up">
         <div class="container-wide p-6">
             <div class="section-separator"></div>
             <div class="about-card rounded p-8">
                 <h2 class="text-center mb-8">Skills</h2>
-               
-                    <div class="col-md-12">
-                        <blockquote class="blockquote text-center mb-8">
-                        <div class="progress-container mt-4">
-                            <div class="progress-item mb-6">
-                                <div class="progress-label">Voice overing</div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" data-progress="90"></div>
-                                    <div class="progress-percentage">90%</div>
-                                </div>
+                <div class="col-md-12">
+                    <div class="progress-container mt-4">
+                        <div class="progress-item mb-6">
+                            <div class="progress-label">Voice Overing</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="90"></div>
+                                <div class="progress-percentage">90%</div>
                             </div>
-                            <div class="progress-item mb-6">
-                                <div class="progress-label">Directing</div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" data-progress="85"></div>
-                                    <div class="progress-percentage">85%</div>
-                                </div>
+                        </div>
+                        <div class="progress-item mb-6">
+                            <div class="progress-label">Directing</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="85"></div>
+                                <div class="progress-percentage">85%</div>
                             </div>
-                            <div class="progress-item mb-6">
-                                <div class="progress-label">Event organizing</div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" data-progress="90"></div>
-                                    <div class="progress-percentage">90%</div>
-                                </div>
+                        </div>
+                        <div class="progress-item mb-6">
+                            <div class="progress-label">Event Organizing</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="90"></div>
+                                <div class="progress-percentage">90%</div>
                             </div>
-                            <div class="progress-item mb-6">
-                                <div class="progress-label">Coding</div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" data-progress="80"></div>
-                                    <div class="progress-percentage">80%</div>
-                                </div>
+                        </div>
+                        <div class="progress-item mb-6">
+                            <div class="progress-label">Coding</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="80"></div>
+                                <div class="progress-percentage">80%</div>
                             </div>
                         </div>
                     </div>
@@ -97,33 +95,69 @@
         </div>
     </div>
 
-    <section id="faq" class="container-fluid text-white text-center py-5">
+    <div id="hobbies" class="container-fluid text-white text-center py-6" data-aos="fade-up">
+        <div class="container-wide p-6">
+            <div class="section-separator"></div>
+            <div class="about-card rounded p-8">
+                <h2 class="text-center mb-8">My Hobbies</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="hobby-card hobby-animate" data-aos="zoom-in">
+                            <i class="bi bi-pencil-fill hobby-icon"></i>
+                            <h4>Drawing</h4>
+                            <p>I like sketching portraits of faces</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="hobby-card hobby-animate" data-aos="zoom-in" data-aos-delay="100">
+                            <i class="bi bi-film hobby-icon"></i>
+                            <h4>Watching Movies</h4>
+                            <p>I love 4 sisters and a wedding btw</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="hobby-card hobby-animate" data-aos="zoom-in" data-aos-delay="200">
+                            <i class="bi bi-airplane-fill hobby-icon"></i>
+                            <h4>Traveling</h4>
+                            <p>I like seeing different places as long as it is not hot</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="hobby-card hobby-animate" data-aos="zoom-in" data-aos-delay="300">
+                            <i class="bi bi-mic-fill hobby-icon"></i>
+                            <h4>Hosting</h4>
+                            <p>I love bringing events to life by being a host</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="faq" class="container-fluid text-white text-center py-5" data-aos="fade-up">
         <div class="container-wide">
             <div class="section-separator"></div>
             <div class="faq-card">
                 <div class="accordion-container">
-                    <div class="accordion-item">
-                        <h2 class="mb-9">Common Questions</h2>
-                        <input type="checkbox" id="acc1" class="accordion-input">
-                        <label for="acc1" class="accordion-label">What services do you offer? <i class="bi bi-chevron-down"></i></label>
+                    <h2 class="mb-9">Common Questions</h2>
+                    <details>
+                        <summary>What services do you offer? <i class="bi bi-chevron-down"></i></summary>
                         <div class="accordion-content">
-                            <p>I specialize in directing cinematic videos, voice Overs for animations and commercials, and designing intuitive UI/UX interfaces.</p>
+                            <p>I specialize in directing cinematic videos, voice overs for animations and commercials, and designing intuitive UI/UX interfaces.</p>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <input type="checkbox" id="acc2" class="accordion-input">
-                        <label for="acc2" class="accordion-label">How can I contact you? <i class="bi bi-chevron-down"></i></label>
+                    </details>
+                    <details>
+                        <summary>How can I contact you? <i class="bi bi-chevron-down"></i></summary>
                         <div class="accordion-content">
                             <p>Reach out via the contact form on my portfolio or email me at joshandrewcumpas@gmail.com</p>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <input type="checkbox" id="acc3" class="accordion-input">
-                        <label for="acc3" class="accordion-label">What is your creative process? <i class="bi bi-chevron-down"></i></label>
+                    </details>
+                    <details>
+                        <summary>What is your creative process? <i class="bi bi-chevron-down"></i></summary>
                         <div class="accordion-content">
                             <p>I begin with a client consultation, followed by concept development, production, and final delivery, ensuring your vision is realized.</p>
                         </div>
-                    </div>
+                    </details>
                 </div>
             </div>
         </div>
@@ -146,5 +180,19 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({ duration: 1000, once: true });
+            const progressFills = document.querySelectorAll('.progress-fill');
+            progressFills.forEach(fill => {
+                const progress = fill.getAttribute('data-progress');
+                fill.style.transition = 'width 2s ease-in-out';
+                setTimeout(() => {
+                    fill.style.width = progress + '%';
+                }, 100);
+            });
+        });
+    </script>
 </body>
 </html>
