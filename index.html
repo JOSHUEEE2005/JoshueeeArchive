@@ -41,7 +41,7 @@
 
     <div id="Showing" class="container-fluid text-white text-center bg-black py-5">
         <div class="container-wide">
-            <h2 class="mb-5">Now showing</h2>
+            <h2 class="mb-5">Produced works</h2>
             <div class="team-container">
                 <div class="row g-4">
                     <div class="col-md-4">
@@ -76,7 +76,7 @@
                 <div class="row g-4">
                     <div class="col-md-6">
                         <div class="video-wrapper">
-                            <video class="hover-video img-fluid rounded" controls muted>
+                            <video class="hover-video img-fluid rounded" controls muted autoplay loop>
                                 <source src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/Rizal_small.mp4" type="video/mp4">
                                 <source src="./img/Rizal_small.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
@@ -88,7 +88,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="video-wrapper">
-                            <video class="hover-video img-fluid rounded" controls muted>
+                            <video class="hover-video img-fluid rounded" controls muted autoplay loop>
                                 <source src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/Commercial.mp4" type="video/mp4">
                                 <source src="./img/Commercial.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
@@ -102,7 +102,7 @@
                 <div class="row g-4 mt-4">
                     <div class="col-md-6">
                         <div class="video-wrapper">
-                            <video class="hover-video img-fluid rounded" controls muted>
+                            <video class="hover-video img-fluid rounded" controls muted autoplay loop>
                                 <source src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/Compet.mp4" type="video/mp4">
                                 <source src="./img/Compet.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
@@ -114,9 +114,9 @@
                     </div>
                     <div class="col-md-6">
                         <div class="video-wrapper">
-                            <video class="hover-video img-fluid rounded" controls muted>
-                                <source src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/BuwanNgWika.mp4" type="video/mp4">
-                                <source src="./img/BuwanNgWika.mp4" type="video/mp4">
+                            <video class="hover-video img-fluid rounded" controls muted autoplay loop>
+                                <source src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/BertangUling.mp4" type="video/mp4">
+                                <source src="./img/BertangUling.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                             <a class="youtube-btn" href="https://youtu.be/_oxV92F_Uas" target="_blank">
@@ -128,19 +128,6 @@
             </div>
         </div>
     </div>
-
-    <section id="reveal" class="container-fluid text-white text-center bg-black py-5">
-        <div class="container-wide">
-            <h2 class="mb-5">Get to know me </h2>
-            <div class="reveal-box">
-                <img src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/GetToKnow.jpg" alt="Portfolio Highlight">
-                <div class="gradient-overlay"></div>
-                <p>
-                    Dream, and give yorself permission to envision a You that you choose to be
-                </p>
-            </div>
-        </div>
-    </section>
 
     <section id="voice" class="VoiceOvers">
         <h2>Voice Samples</h2>
@@ -227,6 +214,19 @@
         </div>
     </section>
 
+    <section id="reveal" class="container-fluid text-white text-center bg-black py-5">
+        <div class="container-wide">
+          
+            <div class="reveal-box">
+                <img src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/GetToKnow.jpg" alt="Portfolio Highlight">
+                <div class="gradient-overlay"></div>
+                <p>
+                    I am a work in progress, I am honing my craft to best suit my clients Voice Over needs in bringing their scripts and events to life
+                </p>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact-section">
         <div class="container-wide">
             <div class="contact-separator"></div>
@@ -281,10 +281,12 @@
             });
         });
 
-        // Hover-to-play for featured videos
-        document.querySelectorAll('.hover-video').forEach(video => {
-            video.addEventListener('mouseenter', () => {
-                video.play();
+        // Auto-play for featured videos on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.hover-video').forEach(video => {
+                video.play().catch(error => {
+                    console.error('Video autoplay failed:', error);
+                });
             });
         });
     </script>
