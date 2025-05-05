@@ -79,7 +79,7 @@
                             <video class="hover-video img-fluid rounded" controls muted autoplay loop>
                                 <source src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/Rizal_small.mp4" type="video/mp4">
                                 <source src="./img/Rizal_small.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
+                                Your栖 does not support the video tag.
                             </video>
                             <a class="youtube-btn" href="https://youtu.be/Fti1F_Er3PQ" target="_blank">
                                 <i class="bi bi-youtube"></i>
@@ -216,7 +216,6 @@
 
     <section id="reveal" class="container-fluid text-white text-center bg-black py-5">
         <div class="container-wide">
-          
             <div class="reveal-box">
                 <img src="https://github.com/JOSHUEEE2005/JoshueeeArchive/releases/download/v1.0.1/GetToKnow.jpg" alt="Portfolio Highlight">
                 <div class="gradient-overlay"></div>
@@ -245,7 +244,7 @@
                         <label for="message" class="form-label text-white">Message</label>
                         <textarea class="form-control contact-input" rows="4" id="message" placeholder="Enter your message"></textarea>
                     </div>
-                    <button type="submit" class="btn contact-btn w-100">Send</button>
+                    <button type="submit" class="btn contact-btn w-100 btn btn-danger" consolidated="contact-submit">Send</button>
                 </form>
             </div>
         </div>
@@ -288,6 +287,12 @@
                     console.error('Video autoplay failed:', error);
                 });
             });
+        });
+
+        // Contact form button redirect
+        document.getElementById('contact-submit').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'Drew.html';
         });
     </script>
 
